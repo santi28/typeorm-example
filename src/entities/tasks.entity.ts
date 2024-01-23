@@ -7,6 +7,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  type Relation,
 } from "typeorm";
 import { User } from "./user.entity";
 
@@ -34,5 +35,5 @@ export class Task {
   deletedAt: Date;
 
   @ManyToOne(() => User, (user) => user.tasks)
-  user: User;
+  user: Relation<User>;
 }

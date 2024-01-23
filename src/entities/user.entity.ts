@@ -6,6 +6,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  type Relation,
 } from "typeorm";
 import { Task } from "./tasks.entity";
 
@@ -29,5 +30,5 @@ export class User {
   deletedAt: Date;
 
   @OneToMany(() => Task, (task) => task.user)
-  tasks: Task[];
+  tasks: Relation<Task>[];
 }
