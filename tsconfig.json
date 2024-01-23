@@ -22,5 +22,6 @@
     /* TypeORM configs */
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
   }
 }
