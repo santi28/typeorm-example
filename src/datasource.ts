@@ -12,8 +12,8 @@ export const dataSource = new DataSource({
   password: DB_PASS,
   database: DB_NAME,
 
-  synchronize: Boolean(DB_SYNC),
-  logging: Boolean(DB_LOGS),
+  synchronize: DB_SYNC === "true",
+  logging: DB_LOGS === "true",
 
   entities: ["src/entities/*.entity.ts"],
 });
