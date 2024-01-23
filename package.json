@@ -2,6 +2,9 @@
   "name": "typeorm-example",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "users:create": "bun run ./src/modules/users/create.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
