@@ -7,7 +7,9 @@
     "users:list": "bun run ./src/modules/users/list.ts",
     "users:tasks": "bun run ./src/modules/users/tasks.ts",
 
-    "tasks:create": "bun run ./src/modules/tasks/create.ts"
+    "tasks:create": "bun run ./src/modules/tasks/create.ts",
+
+    "categories:create": "bun run ./src/modules/categories/create.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

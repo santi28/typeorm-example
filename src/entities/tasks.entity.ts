@@ -4,12 +4,13 @@ import {
   DeleteDateColumn,
   Entity,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   type Relation,
+  ManyToMany,
 } from "typeorm";
 import { User } from "./user.entity";
+import { Category } from "./categories.entity";
 
 @Entity()
 export class Task {
@@ -36,4 +37,7 @@ export class Task {
 
   @ManyToOne(() => User, (user) => user.tasks)
   user: Relation<User>;
+
+  @ManyToMany(() => Category, (category) => category.tasks)
+  categories: Relation<Category>[];
 }
